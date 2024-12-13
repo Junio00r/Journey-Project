@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_origin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginTop="16dp"
+                android:text="@string/default_string"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toStartOf="@+id/text_destiny"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_destiny"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:text="@string/default_string"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_origin"
+                app:layout_constraintEnd_toStartOf="@+id/guideline"
+                app:layout_constraintStart_toEndOf="@+id/text_origin"
+                app:layout_constraintTop_toTopOf="@+id/text_origin" />
+
+            <TextView
+                android:id="@+id/text_driver_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/text_origin"
+                app:layout_constraintStart_toStartOf="@+id/text_origin"
+                app:layout_constraintTop_toBottomOf="@+id/text_origin" />
+
+            <TextView
+                android:id="@+id/text_date"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_driver_name"
+                app:layout_constraintEnd_toEndOf="@+id/text_destiny"
+                app:layout_constraintStart_toStartOf="@+id/text_destiny"
+                app:layout_constraintTop_toTopOf="@+id/text_driver_name" />
+
+            <TextView
+                android:id="@+id/text_cost"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="16dp"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/text_driver_name"
+                app:layout_constraintStart_toStartOf="@+id/text_driver_name"
+                app:layout_constraintTop_toBottomOf="@+id/text_driver_name" />
+
+            <TextView
+                android:id="@+id/text_time"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/text_cost"
+                app:layout_constraintEnd_toEndOf="@+id/text_date"
+                app:layout_constraintStart_toStartOf="@+id/text_date"
+                app:layout_constraintTop_toTopOf="@+id/text_cost" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.7" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginVertical="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/text_distance"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:minLines="2"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="@+id/guideline"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+            </FrameLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </FrameLayout>
+</layout>

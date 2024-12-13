@@ -4,8 +4,9 @@
 /.idea/
 .DS_Store
 /build
-/app/build
+/app/builD
 /captureS
 .externalNativeBuild
 .cxx
 local.properties
+secrets.properties

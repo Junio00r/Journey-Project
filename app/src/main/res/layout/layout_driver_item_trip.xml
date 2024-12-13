@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginVertical="16dp"
+        android:background="@color/white">
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_driver_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/text_driver_travel_cost"
+            app:layout_constraintStart_toEndOf="@+id/text_driver_avaliation"
+            app:layout_constraintTop_toTopOf="@+id/text_driver_avaliation" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_driver_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/text_driver_name"
+            app:layout_constraintStart_toStartOf="@+id/text_driver_name"
+            app:layout_constraintTop_toBottomOf="@+id/text_driver_name" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_driver_vehicle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:layout_marginTop="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/text_driver_avaliation"
+            app:layout_constraintEnd_toEndOf="@+id/text_driver_description"
+            app:layout_constraintStart_toStartOf="@+id/text_driver_description"
+            app:layout_constraintTop_toBottomOf="@+id/text_driver_description" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_driver_avaliation"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_margin="16dp"
+            android:gravity="center"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/text_driver_travel_cost"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/button_select"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_select"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:backgroundTint="@color/black"
+            android:paddingHorizontal="12dp"
+            android:text="@string/button_select_driver"
+            app:cornerRadius="6dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/text_driver_travel_cost" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>

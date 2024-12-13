@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Journey</string>
+    <string name="default_string">Default</string>
+
+    <string name="hint_user_id">User ID</string>
+    <string name="hint_origin_travel">Origin Address</string>
+    <string name="hint_destiny_travel">Destiny Address</string>
+    <string name="button_to_calculate_ride">CALCULATE RIDE</string>
+
+    <string name="image_view_map">Static Map</string>
+    <string name="button_select_driver">ESCOLHER</string>
+    
+    <string name="text_select_drivers">Select Drivers</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="button_apply_filters">Apply</string>
+
 </resources>

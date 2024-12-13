@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.devmobile.android.journey.viewmodel.TripSolicitationViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="32dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextUserId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:autofillHints="@null"
+                android:background="@color/gray_light"
+                android:hint="@string/hint_user_id"
+                android:inputType="text"
+                android:maxLength="64"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="12dp"
+                android:text="@{viewModel.userID}"
+                android:textColorHint="@color/gray"
+                app:circularflow_defaultRadius="110dp"
+                app:circularflow_radiusInDP="110dp"
+                app:layout_constraintCircleRadius="110dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextOriginAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:autofillHints="@null"
+                android:background="@color/gray_light"
+                android:hint="@string/hint_origin_travel"
+                android:inputType="text"
+                android:maxLength="200"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="12dp"
+                android:text="@{viewModel.originAddress}"
+                android:textColorHint="@color/gray"
+                app:layout_constraintEnd_toEndOf="@+id/editTextUserId"
+                app:layout_constraintStart_toStartOf="@+id/editTextUserId"
+                app:layout_constraintTop_toBottomOf="@+id/editTextUserId" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextDestinyAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:layout_weight="1"
+                android:autofillHints="@null"
+                android:background="@color/gray_light"
+                android:hint="@string/hint_destiny_travel"
+                android:inputType="text"
+                android:maxLength="200"
+                android:onClick="@{() -> editTextDestinyAddress.setError(`Error`)}"
+                android:paddingHorizontal="12dp"
+                android:paddingVertical="12dp"
+                android:text="@{ viewModel.destinyAddress}"
+                android:textColorHint="@color/gray"
+                app:layout_constraintEnd_toEndOf="@+id/editTextOriginAddress"
+                app:layout_constraintStart_toStartOf="@+id/editTextOriginAddress"
+                app:layout_constraintTop_toBottomOf="@+id/editTextOriginAddress" />
+
+        </LinearLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/materialButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="@string/button_to_calculate_ride"
+            android:textColor="@color/white"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
